@@ -1,0 +1,45 @@
+.navbar {
+  background-color: #6f6f6f;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 40px;
+}
+
+.brand-img {
+  width: 180px;
+  height: auto;
+}
+
+.categories {
+  display: flex;
+  gap: 50px;
+
+  list-style: none;
+}
+
+.categories li {
+  color: white;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.categories li:hover {
+  color: #d8b46a;
+}
+
+.cartwidget {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: white;
+  font-size: 18px;
+}

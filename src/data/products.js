@@ -1,0 +1,11 @@
+const products =[
+    {
+        id:1,
+        name:"Teclado mecanico",
+        description:"",
+        price: 1200,
+        category: "teclados",
+        stock: 5,
+        image: ""
+    }
+];
