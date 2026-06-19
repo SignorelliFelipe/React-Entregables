@@ -1,0 +1,24 @@
+.item-count {
+  margin-top: 20px;
+}
+
+.item-count button {
+  padding: 8px 12px;
+  margin: 5px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: #d8b46a;
+  cursor: pointer;
+}
+
+.item-count button:hover {
+  background-color: #f0c97c;
+}
+
+.item-count span {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -6,3 +6,9 @@ body{
     background-color: rgba(24, 24, 24);
     color: white;
 }
+.catalog-title {
+  text-align: center;
+  color: #d8b46a;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}

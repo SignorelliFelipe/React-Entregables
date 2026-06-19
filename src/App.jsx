@@ -1,24 +1,40 @@
 import './App.css'
-import HomePage from './components/pages/HomePage';
-import LayoutApp from './layouts/LayoutApp';
+import { Routes, Route } from 'react-router-dom'
+
+import LayoutApp from './layouts/LayoutApp'
+import HomePage from './components/pages/HomePage'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
-
-  //const saludo ="Hola Mundo";
- 
-
   return (
-    <div>
-      <LayoutApp>         
+    <LayoutApp>
 
-        <HomePage />
+      <Routes>
 
-      </LayoutApp>
-    </div>
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
+
+        <Route
+          path="/category/:categoryId"
+          element={<HomePage />}
+        />
+
+        <Route
+          path="/item/:itemId"
+          element={<ItemDetailContainer />}
+        />
+
+        <Route
+          path="*"
+          element={<h2>Error 404 - Página no encontrada</h2>}
+        />
+
+      </Routes>
+
+    </LayoutApp>
   )
 }
 
 export default App
-
-
-

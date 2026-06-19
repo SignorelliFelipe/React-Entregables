@@ -43,3 +43,12 @@
   color: white;
   font-size: 18px;
 }
+
+.categories a {
+  text-decoration: none;
+  color: white;
+}
+
+.categories a:hover {
+  color: #d8b46a;
+}
