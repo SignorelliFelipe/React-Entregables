@@ -1,5 +1,14 @@
 .cartwidget {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cartwidget:hover {
+  color: #d8b46a;
 }

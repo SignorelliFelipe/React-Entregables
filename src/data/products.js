@@ -19,7 +19,7 @@ const products = [
   },
   {
     id: 3,
-    name: "La Primera Ley",
+    name: "La voz de las espadas",
     description: "Saga Grimdark de Joe Abercrombie",
     price: 22000,
     category: "grimdark",

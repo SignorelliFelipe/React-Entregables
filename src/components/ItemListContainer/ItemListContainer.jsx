@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import products from "../../data/products";
+
 import ItemList from "../ItemList/ItemList";
+import {
+  getProducts,
+  getProductsByCategory,
+} from "../../services/firebase";
 
 const ItemListContainer = () => {
 
@@ -11,30 +15,27 @@ const ItemListContainer = () => {
 
   useEffect(() => {
 
-    const getProducts = new Promise((resolve) => {
-      setTimeout(() => {
+    if (categoryId) {
 
-        if (categoryId) {
-          resolve(
-            products.filter(
-              (product) => product.category === categoryId
-            )
-          );
-        } else {
-          resolve(products);
-        }
+      getProductsByCategory(categoryId)
+        .then((response) => {
+          setItems(response);
+        });
 
-      }, 1000);
-    });
+    } else {
 
-    getProducts.then((response) => {
-      setItems(response);
-    });
+      getProducts()
+        .then((response) => {
+          setItems(response);
+        });
+
+    }
 
   }, [categoryId]);
 
   return (
     <div>
+
       <h2 className="catalog-title">
         Catálogo BookWave
       </h2>

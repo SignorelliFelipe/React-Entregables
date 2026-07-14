@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 import LayoutApp from './layouts/LayoutApp'
 import HomePage from './components/pages/HomePage'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Cart from "./components/Cart/Cart";
+import Checkout from "./components/pages/Checkout";
 
 function App() {
   return (
@@ -26,10 +28,22 @@ function App() {
           element={<ItemDetailContainer />}
         />
 
+         <Route
+          path="/checkout"
+          element={<Checkout />}
+        />
+
+        <Route
+          path="/cart"
+          element={<Cart />}
+        />
+
         <Route
           path="*"
           element={<h2>Error 404 - Página no encontrada</h2>}
         />
+
+       
 
       </Routes>
 
